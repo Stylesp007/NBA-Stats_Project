@@ -15,13 +15,13 @@ def get_scoreboard():
 
     for game in games:
         home_team = game['hTeam']
-        away_team = game['vTeam']
+        other_team = game['vTeam']
         clock = game['clock']
         period = game['period']
         
         print("------------------------------------")
-        print(f"{home_team['triCode']} vs {away_team['triCode']}")
-        print(f"{home_team['score']} - {away_team['score']}")
+        print(f"{home_team['triCode']} vs {other_team['triCode']}")
+        print(f"{home_team['score']} - {other_team['score']}")
         print(f"{clock} - {period['current']}")
 
 def get_stats():
@@ -35,7 +35,7 @@ def get_stats():
         name = team['name']
         nickname = team['nickname']
         ppg = team['ppg']['avg']
-        if i == 10:
+        if i == 12:
             break
 
         print(f"{i + 1}. {name} - {nickname}- {ppg}" )
